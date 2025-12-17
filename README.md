@@ -5,9 +5,9 @@
 [![PyG](https://img.shields.io/badge/PyG-PyTorch%20Geometric-orange)](https://pytorch-geometric.readthedocs.io/) [![networkx](https://img.shields.io/badge/networkx-3.3%2B-lightgrey)](https://networkx.org/) [![geoopt](https://img.shields.io/badge/geoopt-0.5.1-8A2BE2)](https://github.com/geoopt/geoopt)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 
-This repository provide the implementation of AAAI 2026 paper "*Adaptive Riemannian Graph Neural Networks*".
+This repository provides the implementation of the AAAI 2026 paper "*Adaptive Riemannian Graph Neural Networks*".
 
-If you use this code in your research, please cite our paper:
+If you find this repository useful or use it in your research, please cite our [paper](https://arxiv.org/abs/2508.02600):
 ```
 @article{wang2025adaptive,
   title={Adaptive riemannian graph neural networks},
@@ -19,28 +19,28 @@ If you use this code in your research, please cite our paper:
 
 ## Overview
 
-Adaptive Riemannian Graph Neural Networks (ARGNN) is a framework that learns a *continuous* and *anisotropic* Riemannian metric tensor field over a graph. Each node adapts its local geometry, allowing the model to better match the graph’s structural landscape.
+Adaptive Riemannian Graph Neural Networks (ARGNN) is a framework that learns a *continuous* and *anisotropic* Riemannian metric tensor field over a graph. Each node adapts its local geometry, enabling the model to more effectively represent the graph’s structural landscape.
 
 ![ARGNN Framework](figs/argnn-framwork.png)
 
 ## Project Structure
 ```
 .
-├── figs/                  # Figure directory
-├── data/                  # Dataset directory (auto-downloaded)
-├── GraphEnv.yml          # Conda environment configuration
-├── README.md              # Project documentation
+├── figs/                  
+├── data/                  # Dataset directory (auto-downloaded if not exist)
+├── GraphEnv.yml          
+├── README.md              
 ├── main.py               # Main training and evaluation script
 ├── models/                # Model definitions
-│   └── argnn_model.py     # ARGNN model implementation
+│   └── argnn_model.py     
 │   └── ...                # Other baseline methods implementation
-├── utils/                 # Utility functions (modularized)
-│   ├── seed_utils.py      # Random seed utilities
-│   ├── logging_utils.py   # Logging, model saving, and record management
+├── utils/                 # Utility functions
+│   ├── seed_utils.py      
+│   ├── logging_utils.py   
 │   ├── data_utils.py      # Dataset loading and split management
-│   ├── train_utils.py     # Training loops for different tasks
-│   ├── eval_utils.py      # Evaluation metrics and performance assessment
-│   └── loss_utils.py      # Loss functions and helper utilities
+│   ├── train_utils.py     
+│   ├── eval_utils.py      
+│   └── loss_utils.py      
 ├── splits/                # Please put official GeomGCN's splits in this folder. Here we provide Cora/Citeseer and Pubmed splits as examples. 
 │   └── ...                # Please download from https://github.com/bingzhewei/geom-gcn   
 └── logs/                  # Training logs and saved models
