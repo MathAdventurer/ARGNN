@@ -55,7 +55,7 @@ Adaptive Riemannian Graph Neural Networks (ARGNN) is a framework that learns a *
 
 ### Node Classification
 
-The [example configurations](./Optimal-Config-Examples.sh) for node classification on Cora, Citeseer and PubMed datasets for a quick start, you can run the command like the following example:
+The [example configurations](./Config-Examples.sh) for node classification on Cora, Citeseer and PubMed datasets for a quick start, you can run the command like the following example:
 
 ```bash
 python main.py --dataset Cora --epochs 200 --model argnn --optimizer adam --lr 0.005 \
